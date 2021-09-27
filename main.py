@@ -8,7 +8,15 @@ def giveBoundsAsList(textfileLine):
   findNumerals = re.findall(r'\d+', textfileLine)
   return list(map(int,findNumerals))
 
+print("the line below is a test to find the bounds as a list:")
 print(giveBoundsAsList(test_string))
+print("\n")
+
+def giveUpperBound(listOfBounds):
+  return listOfBounds[1]
+
+def giveLowerBound(listOfBounds):
+  return listOfBounds[0] 
 
 
 with open('AdventOfCode2020Day2input.txt', 'r') as f:
